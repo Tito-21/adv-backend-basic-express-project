@@ -26,4 +26,8 @@ app.get("/users", (req, res) => {
   
     res.json(users);
   });
+  app.get("/users/:id", (req, res) => {
+    const id = req.params.id;
+    res.send(`You requested the user with ID: ${id}`);
+  });
   
