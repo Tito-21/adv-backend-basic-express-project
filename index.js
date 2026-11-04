@@ -17,3 +17,13 @@ app.get("/about", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+app.get("/users", (req, res) => {
+    const users = [
+      { id: 1, name: "Alice" },
+      { id: 2, name: "Bob" },
+      { id: 3, name: "Charlie" },
+    ];
+  
+    res.json(users);
+  });
+  
