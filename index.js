@@ -30,4 +30,13 @@ app.get("/users", (req, res) => {
     const id = req.params.id;
     res.send(`You requested the user with ID: ${id}`);
   });
+  app.get("/search", (req, res) => {
+    const name = req.query.name;
+  
+    if (!name) {
+      return res.send("Please provide a name, e.g. /search?name=alice");
+    }
+  
+    res.send(`You searched for: ${name}`);
+  });
   
